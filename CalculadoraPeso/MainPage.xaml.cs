@@ -2,23 +2,29 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void OnCalcularClicked(object sender, EventArgs e)
         {
-            count++;
+            string pesoText = PesoEntry.Text?.Replace(',', '.') ?? "";
+            string alturaText = AlturaEntry.Text?.Replace(',', '.') ?? "";
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            bool esPesoValido = double.TryParse(pesoText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double peso);
+            bool esAlturaValida = double.TryParse(alturaText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double altura);
+
+            if (esPesoValido && esAlturaValida && peso > 0 && altura > 0)
+            {
+                double imc = peso / (altura * altura);
+                ResultadoLabel.Text = $"Tu IMC es: {imc:F2}";
+            }
             else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            {
+                ResultadoLabel.Text = "";
+                await DisplayAlert("Datos no válidos", "Por favor, introduce valores numéricos mayores que cero para el peso y la altura.", "OK");
+            }
         }
     }
 }

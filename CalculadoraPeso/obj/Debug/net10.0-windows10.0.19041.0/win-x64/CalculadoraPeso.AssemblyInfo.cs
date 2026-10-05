@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalculadoraPeso")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d73c1d36799ed1794e0f1420c58670442efa545c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalculadoraPeso")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalculadoraPeso")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
