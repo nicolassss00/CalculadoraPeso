@@ -9,21 +9,27 @@
 
         private async void OnCalcularClicked(object sender, EventArgs e)
         {
-            string pesoText = PesoEntry.Text?.Replace(',', '.') ?? "";
-            string alturaText = AlturaEntry.Text?.Replace(',', '.') ?? "";
-
-            bool esPesoValido = double.TryParse(pesoText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double peso);
-            bool esAlturaValida = double.TryParse(alturaText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double altura);
-
-            if (esPesoValido && esAlturaValida && peso > 0 && altura > 0)
+            try
             {
-                double imc = peso / (altura * altura);
-                ResultadoLabel.Text = $"Tu IMC es: {imc:F2}";
+                // 1. Leemos los datos y los convertimos a double
+                double peso = Convert.ToDouble(PesoEntry.Text);
+                double altura = Convert.ToDouble(AlturaEntry.Text);
+
+                // 2. Comprobamos que sean mayores que cero
+                if (peso > 0 && altura > 0)
+                {
+                    double imc = peso / (altura * altura);
+                    ResultadoLabel.Text = $"Tu IMC es: {imc:F2}";
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Los datos deben ser mayores que cero.", "OK");
+                }
             }
-            else
+            catch
             {
-                ResultadoLabel.Text = "";
-                await DisplayAlert("Datos no válidos", "Por favor, introduce valores numéricos mayores que cero para el peso y la altura.", "OK");
+                // Si el usuario escribe letras o deja el texto vacío
+                await DisplayAlert("Error", "Por favor ingresa números válidos.", "OK");
             }
         }
     }
