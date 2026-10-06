@@ -70,10 +70,20 @@
                            TextColor="#0B3252"
                            HorizontalTextAlignment="Center" />
 
+                    <Label x:Name="CategoriaLabel"
+                           Text=""
+                           TextColor="#0B3252"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+
+                    <Image x:Name="ImagenImage"
+                           HeightRequest="120"
+                           HorizontalOptions="Center" />
+
                 </VerticalStackLayout>
             </Border>
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

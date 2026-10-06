@@ -20,6 +20,28 @@
                 {
                     double imc = peso / (altura * altura);
                     ResultadoLabel.Text = $"Tu IMC es: {imc:F2}";
+
+                    // Clasificación por rangos
+                    if (imc < 18.5)
+                    {
+                        CategoriaLabel.Text = "Categoría: DELGADO";
+                        ImagenImage.Source = "delgado.png";
+                    }
+                    else if (imc <= 24.9)
+                    {
+                        CategoriaLabel.Text = "Categoría: NORMAL";
+                        ImagenImage.Source = "normal.png";
+                    }
+                    else if (imc <= 29.9)
+                    {
+                        CategoriaLabel.Text = "Categoría: SOBREPESO";
+                        ImagenImage.Source = "sobrepeso.png";
+                    }
+                    else
+                    {
+                        CategoriaLabel.Text = "Categoría: OBESIDAD";
+                        ImagenImage.Source = "obesidad.png";
+                    }
                 }
                 else
                 {

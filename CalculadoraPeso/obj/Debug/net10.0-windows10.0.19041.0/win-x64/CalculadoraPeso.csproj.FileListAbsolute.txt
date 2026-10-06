@@ -517,3 +517,11 @@ C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64
 C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
+C:\CalculadoraPeso\CalculadoraPeso\bin\Debug\net10.0-windows10.0.19041.0\win-x64\delgado.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\bin\Debug\net10.0-windows10.0.19041.0\win-x64\normal.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\bin\Debug\net10.0-windows10.0.19041.0\win-x64\obesidad.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\bin\Debug\net10.0-windows10.0.19041.0\win-x64\sobrepeso.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\delgado.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\normal.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\obesidad.scale-100.png
+C:\CalculadoraPeso\CalculadoraPeso\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\sobrepeso.scale-100.png
